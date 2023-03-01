@@ -7,7 +7,7 @@ opt.signcolumn = 'yes'
 vim.g.mapleader = ' '
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
-
+vim.keymap.set('n', '<leader><Tab>', vim.cmd.NvimTreeToggle )
 opt.path:remove "/usr/include"
 opt.path:append "**"
 
@@ -45,3 +45,23 @@ require('nvim-test').setup {
     typescriptreact = "nvim-test.runners.jest",
   }
 }
+-- examples for your init.lua
+
+-- disable netrw at the very start of your init.lua (strongly advised)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
+
+
+-- OR setup with some options
+require("nvim-tree").setup({
+  sort_by = "case_sensitive",
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = true,
+  },
+})
