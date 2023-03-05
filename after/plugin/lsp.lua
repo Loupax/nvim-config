@@ -1,3 +1,6 @@
+require("neodev").setup({
+  library = { plugins = { "nvim-dap-ui" }, types = true },
+})
 local lsp = require("lsp-zero")
 
 lsp.preset("recommended")

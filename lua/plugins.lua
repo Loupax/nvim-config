@@ -60,4 +60,5 @@ return require('packer').startup(function()
 		},
 		tag = "nightly" -- optional, updated every week. (see issue #1193)
 	}
+	use 'folke/neodev.nvim'
 end)
