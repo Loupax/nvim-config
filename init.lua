@@ -1,19 +1,9 @@
 require('plugins')
+require('keymaps')
 local opt = vim.opt
 local dap = require "dap"
 opt.number = true
 opt.signcolumn = 'yes'
-
-vim.g.mapleader = ' '
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
-vim.keymap.set('n', '<leader><Tab>', vim.cmd.NvimTreeToggle )
-
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
-vim.keymap.set('n', '<C-p>', builtin.git_files, {})
-vim.keymap.set('n', '<leader>ps', builtin.live_grep, {}) -- See how you can immediately open this. Maybe pop it up on double shift to mimic intellij
-vim.keymap.set('n', '<leader>+', vim.cmd.DapToggleBreakpoint)
 
 opt.path:remove "/usr/include"
 opt.path:append "**"
