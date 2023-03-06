@@ -1,4 +1,9 @@
 vim.cmd [[packadd packer.nvim]]
+require('packer').init({
+       git = {
+               clone_timeout = 7000
+       }
+})
 
 return require('packer').startup(function()
 	-- Packer can manage itself
@@ -61,4 +66,5 @@ return require('packer').startup(function()
 		tag = "nightly" -- optional, updated every week. (see issue #1193)
 	}
 	use 'folke/neodev.nvim'
+	use { "ellisonleao/dotenv.nvim" }
 end)

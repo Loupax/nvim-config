@@ -1,7 +1,6 @@
 require('plugins')
 require('keymaps')
 local opt = vim.opt
-local dap = require "dap"
 opt.number = true
 opt.signcolumn = 'yes'
 
