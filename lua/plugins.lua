@@ -67,4 +67,5 @@ return require('packer').startup(function()
 	}
 	use 'folke/neodev.nvim'
 	use { "ellisonleao/dotenv.nvim" }
+	use  "rust-lang/rust.vim" 
 end)
